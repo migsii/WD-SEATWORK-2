@@ -4,7 +4,7 @@ body {
 }
 
 .hero-4 {
-  background: url("/assets/img/bg5.jpg") no-repeat center/cover;
+  background: url("../../../../assets/img/bg5.jpg") no-repeat center/cover;
   height: 100vh;
   position: relative;
   color: white;
