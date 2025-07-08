@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.landing {
+  height: 100vh;
+  background: url("../img/bg.gif") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.landing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.landing p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: 0; /* stays below */
+  pointer-events: none; /* important */
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.75em 1.5em;
+  background-color: #ffffffaa;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #334155;
+}
+
+.btn-nav {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  background-color: #0f172a;
+  color: #64ffda;
+  border: 1px solid #64ffda66;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.1);
+}
+
+.btn-nav:hover {
+  background-color: #64ffda;
+  color: #0f172a;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+}
+
+.glitch-text {
+  position: relative;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 2px #f0f, 0 0 5px #0ff;
+  animation: glitch 2s infinite;
+}
+
+.neon-text {
+  font-size: 2rem;
+  color: #64ffda;
+  text-shadow: 0 0 5px #64ffda, 0 0 20px #64ffda88;
+  animation: pulse 3s infinite;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #64ffda, 0 0 20px #64ffda88;
+  }
+  50% {
+    text-shadow: 0 0 10px #64ffda, 0 0 30px #64ffda99;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
